@@ -11,70 +11,51 @@
 </head>
 <body>
     <div class="background-container">
-        <video autoplay muted loop playsinline class="background-media">
-            <source src="fondo2.mp4" type="video/mp4">
-        </video>
+        <video autoplay muted loop playsinline class="background-media"><source src="fondo2.mp4" type="video/mp4"></video>
         <div class="background-overlay"></div>
     </div>
+    
     <header>
         <nav class="nav-inner">
             <a href="index.html" class="logo"><img src="logoB.png" alt="Logo Acuario Matatlán" /></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="peces.html" class="active">Peces</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="cuidados.html">Guía de cuidados</a></li>
+                <li><a href="quienes.html" class="nav-button">¿Quiénes somos?</a></li>
             </ul>
-            <a href="quienes.html" class="nav-button">¿Quiénes somos?</a>
         </nav>
     </header>
 
     <main>
         <section class="hero-content">
-            <h1>Encuentra a tu próximo compañero acuático</h1>
-            <p>Explora nuestra selección de peces de agua dulce y salada, criados con cuidado y listos para un nuevo hogar.</p>
+            <h1>Encuentra a tu compañero acuático</h1>
+            <p>Explora nuestra selección de peces, criados con cuidado y listos para un nuevo hogar.</p>
         </section>
 
         <section id="agua-dulce" class="page-section">
             <div class="section-container">
                 <h4>Agua dulce</h4>
                 <div class="product-grid">
-                    <div class="product-card"> <img src="betta.jpg" alt="Pez Betta"> <h5>Pez Betta splendens</h5> <p>Un pez de carácter único y belleza sin igual. Ideal para acuarios pequeños.</p> <div class="price">$250.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="disco.jpg" alt="Pez Disco"> <h5>Pez disco</h5> <p>El rey del acuario amazónico. Requiere cuidados específicos y aguas blandas.</p> <div class="price">$1,200.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="dorado.jpg" alt="Goldfish"> <h5>Goldfish</h5> <p>El pez de agua fría más popular y conocido. Ideal para principiantes.</p> <div class="price">$100.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="guppy.jpg" alt="Pez Guppy"> <h5>Guppy endler</h5> <p>Pequeños, activos y llenos de color. Perfectos para acuarios comunitarios.</p> <div class="price">$80.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="tetra.jpg" alt="Tetra Neón"> <h5>Tetra neón</h5> <p>Un clásico de la acuariofilia. Su brillante franja azul ilumina cualquier acuario plantado.</p> <div class="price">$50.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="corydora.jpg" alt="Corydora Albina"> <h5>Corydora albina</h5> <p>Pacífica y trabajadora, esta especie de fondo ayudará a mantener limpio tu sustrato.</p> <div class="price">$120.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="pleco.jpg" alt="Plecostomus"> <h5>Plecostomus</h5> <p>El famoso "limpiapeceras". Crece bastante, ideal para acuarios grandes.</p> <div class="price">$180.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="angel.jpg" alt="Pez Ángel"> <h5>Pez ángel</h5> <p>De nado elegante y forma majestuosa, es el protagonista de muchos acuarios.</p> <div class="price">$200.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="agua-salada" class="page-section alternate-bg">
-            <div class="section-container">
-                <h4>Agua salada</h4>
-                <div class="product-grid">
-                    <div class="product-card"> <img src="payaso.jpg" alt="Pez Payaso"> <h5>Pez payaso</h5> <p>El habitante más icónico de los arrecifes. Resistente y perfecto para empezar.</p> <div class="price">$750.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="cirujanoo.jpeg" alt="Pez Cirujano"> <h5>Cirujano de cola amarilla</h5> <p>Un pez vibrante que ayuda a controlar las algas en tu acuario de arrecife.</p> <div class="price">$1,500.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="mandarin.jpg" alt="Pez Mandarín"> <h5>Pez mandarín psicodélico</h5> <p>De belleza espectacular, requiere un acuario maduro con microfauna.</p> <div class="price">$1,100.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="damiselaa.jpg" alt="Damisela de Cola Amarilla"> <h5>Damisela de cola amarilla</h5> <p>Un pez pequeño y resistente, ideal para el ciclado de acuarios marinos.</p> <div class="price">$400.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="gramma.jpg" alt="Gramma Real"> <h5>Gramma real</h5> <p>Con su impactante mitad púrpura y mitad amarilla, es una joya del Caribe.</p> <div class="price">$900.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="fuego.jpg" alt="Pez de Fuego"> <h5>Pez de fuego</h5> <p>Tímido pero con una aleta dorsal espectacular. Le encantan las cuevas.</p> <div class="price">$850.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="zorro.jpg" alt="Cara de Zorro"> <h5>Cara de zorro</h5> <p>Un excelente comedor de algas con una coloración amarilla muy llamativa.</p> <div class="price">$1,300.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="nariz.jpg" alt="Pez Halcón"> <h5>Pez halcón de nariz larga</h5> <p>Le encanta posarse sobre rocas y corales, observando todo a su alrededor.</p> <div class="price">$950.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
+                    <div class="product-card"><img src="betta.jpg" alt="Pez Betta"><h5>Pez Betta</h5><p>Carácter único y belleza sin igual.</p><div class="price">$250.00 MXN</div></div>
+                    <div class="product-card"><img src="disco.jpg" alt="Pez Disco"><h5>Pez Disco</h5><p>El rey del acuario amazónico.</p><div class="price">$1,200.00 MXN</div></div>
+                    <div class="product-card"><img src="dorado.jpg" alt="Goldfish"><h5>Goldfish</h5><p>El pez de agua fría más popular.</p><div class="price">$100.00 MXN</div></div>
+                    <div class="product-card"><img src="guppy.jpg" alt="Pez Guppy"><h5>Guppy Endler</h5><p>Pequeños, activos y llenos de color.</p><div class="price">$80.00 MXN</div></div>
+                    <div class="product-card"><img src="tetra.jpg" alt="Tetra Neón"><h5>Tetra Neón</h5><p>Un clásico que ilumina cualquier acuario.</p><div class="price">$50.00 MXN</div></div>
+                    <div class="product-card"><img src="corydora.jpg" alt="Corydora Albina"><h5>Corydora Albina</h5><p>Pacífica y trabajadora, limpia el sustrato.</p><div class="price">$120.00 MXN</div></div>
                 </div>
             </div>
         </section>
 
-        <section id="otros-animales" class="page-section">
+        <section id="otros-animales" class="page-section alternate-bg">
             <div class="section-container">
-                <h4>Otros animales acuáticos</h4>
+                <h4>Otros Animales</h4>
                 <div class="product-grid">
-                    <div class="product-card"> <img src="ajolote.jpg" alt="Axolote"> <h5>Axolote mexicano</h5> <p>Con su eterna sonrisa, es uno de los anfibios más carismáticos y queridos.</p> <div class="price">$600.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="tortuga.jpg" alt="Tortuga Acuática Pequeña"> <h5>Tortuga acuática pequeña</h5> <p>Necesitan un acuario con zona seca para asolearse. ¡Crecen bastante!</p> <div class="price">$300.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="camaron.jpg" alt="Camarón Cherry"> <h5>Camarón cherry</h5> <p>Un toque de color rojo intenso. Son pacíficos y ayudan a limpiar el acuario.</p> <div class="price">$90.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
-                    <div class="product-card"> <img src="cangrejo.jpg" alt="Cangrejo Enano"> <h5>Cangrejo enano azul</h5> <p>De un brillante color azul, este pequeño cangrejo es activo y muy curioso.</p> <div class="price">$250.00 MXN</div> <a href="#" class="cta-button">Agregar al carrito</a> </div>
+                    <div class="product-card"><img src="ajolote.jpg" alt="Axolote"><h5>Axolote Mexicano</h5><p>Uno de los anfibios más carismáticos.</p><div class="price">$600.00 MXN</div></div>
+                    <div class="product-card"><img src="camaron.jpg" alt="Camarón Cherry"><h5>Camarón Cherry</h5><p>Un toque de color rojo que ayuda a limpiar.</p><div class="price">$90.00 MXN</div></div>
                 </div>
             </div>
         </section>
@@ -85,16 +66,22 @@
             <div class="footer-column">
                 <h5>Acuario Matatlán</h5>
                 <p>Tu tienda de acuariofilia. Pasión y calidad para tu mundo acuático.</p>
-                <p>Donovan Pérez | © 2025 Todos los derechos reservados.</p>
+                <p>Donovan Pérez | © 2025</p>
             </div>
             <div class="footer-column">
                 <h5>Contacto y ayuda</h5>
                 <ul class="footer-links">
-                    <li><a href="contacto.html">Formulario de contacto</a></li>
-                    <li><a href="ubicacion.html">Ubicación y horarios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        navToggle.addEventListener('change', function() {
+            document.body.classList.toggle('menu-open', this.checked);
+        });
+    </script>
 </body>
 </html>
