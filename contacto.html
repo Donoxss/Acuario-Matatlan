@@ -4,79 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Acuario Matatlán</title>
-    <link rel="icon" type="image/png" href="imagenes logo/logoH.png">
+    <link rel="icon" type="image/png" href="logoH.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <div class="background-container">
-        <img src="fondos/fondo5.jpg" alt="Fondo marino del acuario" class="background-media">
+        <img src="fondo5.jpg" alt="Fondo marino" class="background-media">
         <div class="background-overlay"></div>
     </div>
 
     <header>
         <nav class="nav-inner">
-            <a href="index.html" class="logo"><img src="imagenes logo/logoB.png" alt="Logo Acuario Matatlán" /></a>
+            <a href="index.html" class="logo"><img src="logoB.png" alt="Logo Acuario Matatlán" /></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="peces.html">Peces</a></li>
+                <li><a href="productos.html">Productos</a></li>
                 <li><a href="cuidados.html">Guía de cuidados</a></li>
-                <li><a href="contacto.html" class="active">Contacto</a></li>
-                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="quienes.html" class="nav-button">¿Quiénes somos?</a></li>
             </ul>
-            <a href="quienes.html" class="nav-button">¿Quiénes somos?</a>
         </nav>
     </header>
 
     <main>
         <section class="hero-content">
             <h1>Estamos para ayudarte</h1>
-            <p>¿Tienes dudas sobre un producto, necesitas asesoría o quieres saber sobre tu pedido? Rellena el formulario y te responderemos a la brevedad.</p>
-        </section>
-
-        <section id="formulario" class="page-section">
-            <div class="section-container">
-                <h4>Envíanos un mensaje</h4>
-                <form class="contact-form" action="#" method="POST">
-                    
-                    <label for="name">Nombre completo:</label>
-                    <input type="text" id="name" name="user_name" required placeholder="Escribe tu nombre...">
-                    
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="user_email" required placeholder="tu.correo@ejemplo.com">
-
-                    <label for="phone">Teléfono (opcional):</label>
-                    <input type="tel" id="phone" name="user_phone" placeholder="Tu número de teléfono">
-
-                    <label for="subject">Asunto:</label>
-                    <select id="subject" name="user_subject" required>
-                        <option value="" >Elige un motivo...</option>
-                        <option value="duda_producto">Duda sobre un producto</option>
-                        <option value="estado_pedido">Estado de mi pedido</option>
-                        <option value="asesoria">Asesoría para mi acuario</option>
-                        <option value="otro">Otro</option>
-                    </select>
-
-                    <label for="order_number">Número de pedido (opcional):</label>
-                    <input type="text" id="order_number" name="user_order_number" placeholder="Ej: 12345">
-
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="user_message" rows="6" required placeholder="Escribe aquí tu duda o mensaje..."></textarea>
-                    
-                    <input type="submit" value="Enviar mensaje" class="cta-button" style="width: 100%;">
-                </form>
-            </div>
-        </section>
-
-        <section id="direct-contact" class="page-section alternate-bg">
-            <div class="section-container">
-                <h4>O contáctanos directamente</h4>
-                <p style="margin-bottom: 40px;">Si prefieres, puedes comunicarte a través de estos canales en nuestro horario de atención.</p>
-                <div class="contact-details">
-                    <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> 33 3002 0800</p>
-                    <p><i class="fas fa-envelope"></i> <strong>Correo:</strong> direccion.plantel.rio@ceti.mx</p>
-                </div>
-            </div>
+            <p>¿Tienes dudas o necesitas asesoría? Rellena el formulario y te responderemos a la brevedad.</p>
         </section>
     </main>
 
@@ -85,16 +42,22 @@
             <div class="footer-column">
                 <h5>Acuario Matatlán</h5>
                 <p>Tu tienda de acuariofilia. Pasión y calidad para tu mundo acuático.</p>
-                <p>Donovan Pérez | © 2025 Todos los derechos reservados.</p>
+                <p>Donovan Pérez | © 2025</p>
             </div>
             <div class="footer-column">
                 <h5>Contacto y ayuda</h5>
                 <ul class="footer-links">
-                    <li><a href="contacto.html">Formulario de contacto</a></li>
-                    <li><a href="ubicacion.html">Ubicación y horarios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        navToggle.addEventListener('change', function() {
+            document.body.classList.toggle('menu-open', this.checked);
+        });
+    </script>
 </body>
 </html>
