@@ -3,63 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justificación del diseño - Acuario Matatlán</title>
-    <link rel="icon" type="image/png" href="imagenes logo/logoH.png">
-    
+    <title>Justificación - Acuario Matatlán</title>
+    <link rel="icon" type="image/png" href="logoH.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <div class="background-container">
-        <video autoplay muted loop playsinline class="background-media">
-            <source src="fondos/fondo2.mp4" type="video/mp4">
-        </video>
+        <video autoplay muted loop playsinline class="background-media"><source src="fondo2.mp4" type="video/mp4"></video>
         <div class="background-overlay"></div>
     </div>
 
     <header>
         <nav class="nav-inner">
-            <a href="index.html" class="logo"><img src="imagenes logo/logoB.png" alt="Logo Acuario Matatlán" /></a>
+            <a href="index.html" class="logo"><img src="logoB.png" alt="Logo Acuario Matatlán" /></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="peces.html">Peces</a></li>
+                <li><a href="productos.html">Productos</a></li>
                 <li><a href="cuidados.html">Guía de cuidados</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="quienes.html" class="nav-button">¿Quiénes somos?</a></li>
             </ul>
-            <a href="quienes.html" class="nav-button">¿Quiénes somos?</a>
         </nav>
     </header>
 
     <main>
         <section class="hero-content">
-            <h1>Detrás de mi diseño</h1>
-            <p>La historia y las decisiones que dieron forma a la estética de Acuario Matatlán.</p>
+            <h1>Detrás de mi Diseño</h1>
+            <p>Las decisiones que dieron forma a la estética de Acuario Matatlán.</p>
         </section>
 
-        <section class="page-section alternate-bg">
+        <section class="page-section">
             <div class="section-container">
                 <div class="guide-grid">
-                    
-                    <div class="guide-item">
-                        <i class="fas fa-palette"></i>
-                        <h5>Diseño de la página</h5>
-                        <p>Elegí este diseño porque me recordó a la estética "LiquidGlass" de iPhone; buscaba un estilo moderno y poco común en páginas de acuarios. El objetivo era transmitir confianza y profesionalismo para generar un mayor atractivo y, así, captar la atención de los usuarios. Aunque me faltaron algunos elementos que me hubiera gustado agregar, considero que hice un buen diseño.</p>
-                    </div>
-                    
-                    <div class="guide-item">
-                        <i class="fas fa-swatchbook"></i>
-                        <h5>Paleta de colores</h5>
-                        <p>La paleta de colores me pareció la correcta. Comúnmente, en las páginas de acuarios se utiliza el azul, ya que transmite calma, confianza y serenidad. Lo combiné con el blanco, que proyecta limpieza, paz y pureza. Esta mezcla crea un ambiente tranquilo en la página y, a mi gusto, sí logra una apariencia moderna y hasta elegante.</p>
-                    </div>
-
-                    <div class="guide-item">
-                        <i class="fas fa-signature"></i>
-                        <h5>Mi logotipo</h5>
-                        <p>El logotipo es de color blanco por las mismas razones: para transmitir confianza y pureza. Decidí usar un ajolote como emblema porque me parece que es uno de los animales más queridos y representativos de México, lo que lo convierte en un logotipo bastante fácil de recordar y muy llamativo para mi página.</p>
-                    </div>
-
+                    <div class="product-card"><i class="fas fa-palette" style="font-size:2rem; color:#4fc3f7; margin-bottom:15px;"></i><h5>Diseño de la Página</h5><p>Busqué un estilo moderno y poco común en páginas de acuarios para transmitir confianza y profesionalismo, captando así la atención de los usuarios.</p></div>
+                    <div class="product-card"><i class="fas fa-swatchbook" style="font-size:2rem; color:#4fc3f7; margin-bottom:15px;"></i><h5>Paleta de Colores</h5><p>Utilicé el azul, que transmite calma y confianza, combinado con el blanco que proyecta limpieza y pureza, logrando una apariencia moderna y elegante.</p></div>
+                    <div class="product-card"><i class="fas fa-signature" style="font-size:2rem; color:#4fc3f7; margin-bottom:15px;"></i><h5>Mi Logotipo</h5><p>Usé un ajolote, animal querido y representativo de México, para crear un emblema memorable y llamativo para la página.</p></div>
                 </div>
             </div>
         </section>
@@ -70,16 +52,22 @@
             <div class="footer-column">
                 <h5>Acuario Matatlán</h5>
                 <p>Tu tienda de acuariofilia. Pasión y calidad para tu mundo acuático.</p>
-                <p>Donovan Pérez | © 2025 Todos los derechos reservados.</p>
+                <p>Donovan Pérez | © 2025</p>
             </div>
             <div class="footer-column">
                 <h5>Contacto y ayuda</h5>
                 <ul class="footer-links">
-                    <li><a href="contacto.html">Formulario de contacto</a></li>
-                    <li><a href="ubicacion.html">Ubicación y horarios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        navToggle.addEventListener('change', function() {
+            document.body.classList.toggle('menu-open', this.checked);
+        });
+    </script>
 </body>
 </html>
