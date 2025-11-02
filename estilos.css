@@ -250,7 +250,7 @@ header {
     color: #e0e0f0;
     font-size: 0.95rem;
     margin-bottom: 15px;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .product-card .price {
@@ -294,8 +294,8 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: #fff;
     font-size: 1rem; font-family: 'Poppins', sans-serif;
 }
-.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { 
-    outline: none; border-color: #4fc3f7; 
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+    outline: none; border-color: #4fc3f7;
 }
 
 .contact-form textarea {
@@ -311,7 +311,7 @@ header {
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1.2em;
-    padding-right: 2.5rem; 
+    padding-right: 2.5rem;
 }
 
 /* Para navegadores que no soportan el estilo (fallback) */
@@ -409,12 +409,12 @@ header {
     animation: scroll 40s linear infinite;
 }
 @keyframes scroll {
-    to { 
+    to {
         transform: translateX(calc((400px + 20px) * -5));
     }
 }
-.image-carousel:hover { 
-    animation-play-state: paused; 
+.image-carousel:hover {
+    animation-play-state: paused;
 }
 .image-carousel img {
     width: 400px;
@@ -528,14 +528,14 @@ header {
 }
 
 #nuestra-historia .section-container {
-    max-width: 900px; 
+    max-width: 900px;
 }
 
 #nuestra-historia h4 {
-    position: relative;        
-    display: inline-block;    
-    padding-bottom: 15px;      
-    margin-bottom: 40px;      
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
 }
 
 #nuestra-historia h4::after {
@@ -544,23 +544,23 @@ header {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;            
-    height: 3px;              
-    background: #4fc3f7;     
+    width: 80px;
+    height: 3px;
+    background: #4fc3f7;
     border-radius: 2px;
 }
 
 .historia-texto {
-    text-align: left;        
+    text-align: left;
     max-width: 800px;
-    margin: 0 auto;         
+    margin: 0 auto;
 }
 
 .historia-texto p {
     color: #e0e0f0;
     font-size: 1.1rem;
-    line-height: 1.8;        
-    margin-bottom: 25px;     
+    line-height: 1.8;
+    margin-bottom: 25px;
 }
 
 .historia-texto p:last-child {
@@ -568,104 +568,150 @@ header {
 }
 
 
-/* ============================================= */
-/* --- ESTILOS RESPONSIVOS PARA MÓVILES --- */
-/* (Se activa en pantallas de 768px o menos) */
-/* ============================================= */
+/* ================================================================== */
+/* =========   ESTILOS RESPONSIVOS PARA TODOS LOS DISPOSITIVOS  ========= */
+/* ================================================================== */
+
+/* --- Para Tablets (hasta 992px) --- */
+@media (max-width: 992px) {
+    .menu {
+        gap: 20px; /* Reduce el espacio entre elementos del menú */
+    }
+
+    .footer-container {
+        /* Pasa el grid del footer a 2 columnas para mejor visualización */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+
+/* --- Para Celulares y Tablets en Vertical (hasta 768px) --- */
 @media (max-width: 768px) {
 
-    /* --- 1. Ajustes Generales del Cuerpo --- */
+    /* --- 1. Ajustes Generales --- */
     body {
-        /* Reduce el tamaño de fuente base para mejorar la legibilidad en pantallas pequeñas */
-        font-size: 15px;
+        font-size: 16px; /* Aumenta ligeramente la fuente base para legibilidad */
     }
 
     .section-container {
-        /* Reduce el padding lateral en las secciones para dar más espacio al contenido */
-        padding: 40px 15px;
+        padding: 40px 20px; /* Ajusta el padding lateral */
     }
 
     /* --- 2. Menú de Navegación --- */
-    header .nav-inner {
-        /* Cambia la dirección del flexbox a columna para apilar los elementos */
-        flex-direction: column;
-        padding: 15px; /* Menos padding en el header */
+    .nav-inner {
+        flex-direction: column; /* Apila el contenido del nav */
+        padding: 15px;
     }
 
-    header .logo {
-        /* Centra el logo */
+    .logo {
         margin-bottom: 15px;
     }
 
-    header .menu {
-        /* El menú ahora se apila verticalmente */
-        flex-direction: column;
-        align-items: center; /* Centra los elementos del menú */
+    .menu {
+        flex-direction: column; /* Apila los links del menú */
+        align-items: center;
         width: 100%;
+        gap: 0; /* Quita el gap horizontal */
         margin-bottom: 15px;
     }
 
-    header .menu li {
-        margin: 8px 0; /* Añade espacio vertical entre los enlaces del menú */
+    .menu li {
+        width: 100%;
+        text-align: center;
     }
 
-    header .nav-button {
-        /* El botón ahora ocupa todo el ancho */
+    .menu a {
+        display: block; /* Hace que el link ocupe todo el ancho del li */
+        padding: 10px 0; /* Añade padding vertical para facilitar el toque */
+    }
+
+    .menu a::after {
+        /* Oculta la línea de abajo en móvil o ajústala si prefieres */
+        display: none;
+    }
+    
+    .menu a.active {
+        /* Estilo más notorio para el link activo en móvil */
+        color: #fff;
+        background: rgba(79, 195, 247, 0.2);
+        border-radius: 8px;
+    }
+
+    .nav-button {
         width: 100%;
         text-align: center;
         padding: 12px 0;
     }
 
-    /* --- 3. Contenido Principal y Títulos --- */
+    /* --- 3. Contenido Hero y Títulos --- */
     .hero-content {
-        padding: 0 15px; /* Menos padding lateral */
+        padding: 30px 20px;
     }
 
     .hero-content h1 {
-        /* Reduce el tamaño del título principal para que no ocupe tanto espacio */
-        font-size: 2.5rem;
+        font-size: 2.2rem; /* Reduce el título principal */
+    }
+
+    .hero-content > p {
+        font-size: 1rem;
+        max-width: 100%; /* Permite que el párrafo ocupe más espacio */
     }
     
-    .hero-content p {
-        /* Limita el ancho del párrafo para que sea más fácil de leer */
-        max-width: 90%;
+    .section-container > p {
+        margin-bottom: 40px; /* Reduce el margen inferior del párrafo de sección */
     }
 
-    h4 {
-        font-size: 1.8rem; /* Reduce el tamaño de los subtítulos de sección */
-    }
-
-
-    /* --- 4. Grids de Productos, Guías y Categorías (El cambio más importante) --- */
-    
-    /* Esta regla se aplica a TODAS tus cuadrículas */
+    /* --- 4. Grids de Contenido (LA PARTE CLAVE) --- */
     .product-grid,
     .guide-grid,
     .category-grid,
-    .quienes-grid {
-        /* Cambia la cuadrícula a una sola columna */
-        grid-template-columns: 1fr;
-        gap: 20px; /* Un poco menos de espacio entre elementos */
+    .quienes-grid,
+    .footer-container {
+        grid-template-columns: 1fr; /* TODAS las grids a una sola columna */
+        gap: 25px;
     }
 
-    /* --- 5. Footer (Pie de Página) --- */
-    .site-footer .footer-container {
-        /* Apila las columnas del footer verticalmente */
-        flex-direction: column;
-        text-align: center; /* Centra el texto */
-    }
-    
-    .site-footer .footer-column {
-        margin-bottom: 20px; /* Añade espacio entre las columnas apiladas */
-    }
-    
-    .site-footer .footer-links li {
-        margin: 5px 0;
+    /* --- 5. Carrusel --- */
+    @keyframes scroll {
+        to {
+            /* Ajusta la animación para el nuevo tamaño de imagen */
+            transform: translateX(calc((300px + 20px) * -5));
+        }
     }
 
-    /* --- 6. Formulario de Contacto --- */
+    .image-carousel {
+        /* Ajusta el ancho total del carrusel */
+        width: calc((300px + 20px) * 10);
+    }
+    
+    .image-carousel img {
+        width: 300px; /* Reduce el tamaño de las imágenes del carrusel */
+    }
+
+    /* --- 6. Footer --- */
+    .site-footer {
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        text-align: center;
+    }
+    
+    .footer-column {
+        margin-bottom: 30px;
+    }
+
+    .footer-column:last-child {
+        margin-bottom: 0;
+    }
+
+    /* --- 7. Quiénes Somos y Contacto --- */
+    .quienes-item img {
+        width: 150px;
+        height: 150px;
+    }
+    
     .contact-form {
-        padding: 20px; /* Menos padding en el formulario */
+        padding: 0; /* El padding ya está en .section-container */
     }
-
 }
