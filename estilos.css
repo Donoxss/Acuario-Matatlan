@@ -4,13 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-family: "Poppins", sans-serif;
   background-color: #06152B;
   scroll-behavior: smooth;
 }
-
 body {
   color: #fff;
   overflow-x: hidden;
@@ -27,14 +25,12 @@ body {
   overflow: hidden;
   z-index: -2;
 }
-
 .background-media {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.3) blur(3px);
 }
-
 .background-overlay {
   position: fixed;
   top: 0;
@@ -56,7 +52,6 @@ header {
   padding: 10px 5%;
   z-index: 1000;
 }
-
 .nav-inner {
   max-width: 1300px;
   margin: 0 auto;
@@ -64,23 +59,19 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
 .logo img {
-  height: 60px;
+  height: 50px; /* Reducido para mejor ajuste en móvil */
   transition: transform 0.4s ease;
 }
-
 .logo:hover img {
   transform: scale(1.07);
 }
-
 .menu {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 28px;
 }
-
 .menu a {
   text-decoration: none;
   color: #f0f0f0;
@@ -91,11 +82,7 @@ header {
   transition: color 0.3s ease;
   white-space: nowrap;
 }
-
-.menu a:hover, .menu a.active {
-  color: #4fc3f7;
-}
-
+.menu a:hover, .menu a.active { color: #4fc3f7; }
 .menu a::after {
   content: '';
   position: absolute;
@@ -107,11 +94,7 @@ header {
   transform: scaleX(0);
   transition: transform 0.3s ease-out;
 }
-
-.menu a:hover::after, .menu a.active::after {
-  transform: scaleX(1);
-}
-
+.menu a:hover::after, .menu a.active::after { transform: scaleX(1); }
 .nav-button {
   display: inline-block;
   padding: 8px 20px;
@@ -124,594 +107,172 @@ header {
   transition: all 0.3s ease;
   white-space: nowrap;
 }
-
 .nav-button:hover {
   background: #4fc3f7;
   color: #06152B;
   box-shadow: 0 0 15px rgba(79, 195, 247, 0.5);
 }
 
-
-/* --- Estructura Principal y Secciones --- */
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 50px 30px;
+/* --- Botón de Menú Hamburguesa (Inicialmente oculto) --- */
+.nav-toggle, .nav-toggle-label {
+    display: none;
 }
 
-.hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  margin-bottom: 5px;
-  background: linear-gradient(120deg, #fff, #c3d4ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(200, 200, 255, 0.3);
-}
-
-.hero-content > p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  margin-bottom: 30px;
-  color: #e0e0f0;
-  max-width: 700px;
-}
-
-.page-section {
-  padding: 50px 5%;
-}
-
-.page-section.alternate-bg {
-  background-color: transparent;
-}
-
-.section-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section-container h4 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.section-container > p {
-  max-width: 800px;
-  margin: 0 auto 60px;
-  color: #e0e0f0;
-  font-size: 1.1rem;
-}
-
-/* --- Botones --- */
-.cta-button {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 50px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 12px 28px;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  border: none;
-  color: #fff;
-  box-shadow: 0 5px 20px rgba(0, 114, 255, 0.4);
-  margin-top: 15px;
-}
-.cta-button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 180, 255, 0.6);
-}
-
-/* --- Grids de Productos --- */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-}
-
-.product-card {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.product-card h5 {
-    font-size: 1.4rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.product-card p {
-    color: #e0e0f0;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    flex-grow: 1;
-}
-
-.product-card .price {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #4fc3f7;
-    margin-bottom: 15px;
-}
-
-/* --- Guía de Cuidados y Valores --- */
-.guide-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    text-align: left;
-}
-.guide-item {
-    background: rgba(255,255,255,0.05);
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-.guide-item i {
-    font-size: 2.5rem;
-    color: #4fc3f7;
-    margin-bottom: 15px;
-}
-.guide-item h5 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* --- Ubicación y Contacto --- */
-.location-details { font-size: 1.2rem; margin-bottom: 20px; }
-.map-container { border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-.contact-form { max-width: 800px; margin: 0 auto; text-align: left; }
-.contact-form label { display: block; margin-bottom: 8px; font-weight: 500; }
-
-.contact-form input, .contact-form textarea, .contact-form select {
-    width: 100%; padding: 14px; margin-bottom: 20px; background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; color: #fff;
-    font-size: 1rem; font-family: 'Poppins', sans-serif;
-}
-.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
-    outline: none; border-color: #4fc3f7;
-}
-
-.contact-form textarea {
-    resize: none;
-}
-
-/* Estilos personalizados para SELECT */
-.contact-form select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234fc3f7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1.2em;
-    padding-right: 2.5rem;
-}
-
-/* Para navegadores que no soportan el estilo (fallback) */
-.contact-form select:invalid {
-    color: #a0a0a0;
-}
-
-.contact-form option {
-    background-color: #06152B;
-    color: #fff;
-}
-
-.contact-details {
-    text-align: center;
-}
-.contact-details p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-.contact-details a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-.contact-details a:hover {
-    color: #4fc3f7;
-}
-.contact-details i {
-    color: #4fc3f7;
-    margin-right: 15px;
-    width: 20px;
-    text-align: center;
-}
-
-/* --- Equipo (Página Quiénes Somos) --- */
-.quienes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
-}
-
-.quienes-item {
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 30px 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.quienes-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.quienes-item img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 20px auto;
-    border: 4px solid #4fc3f7;
-    box-shadow: 0 0 20px rgba(79, 195, 247, 0.4);
-    transition: transform 0.3s;
-    background-color: rgba(6, 21, 43, 0.5);
-}
-
-.quienes-item:hover img {
-    transform: scale(1.05);
-}
-
-.quienes-item h5 {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-    color: #fff;
-}
-
-.quienes-item p {
-    font-size: 1rem;
-    color: #4fc3f7;
-    font-weight: 500;
-}
-
-/* --- Carrusel --- */
-.image-carousel-container {
-    overflow: hidden;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-.image-carousel {
-    display: flex;
-    gap: 20px;
-    width: calc((400px + 20px) * 10);
-    animation: scroll 40s linear infinite;
-}
-@keyframes scroll {
-    to {
-        transform: translateX(calc((400px + 20px) * -5));
-    }
-}
-.image-carousel:hover {
-    animation-play-state: paused;
-}
-.image-carousel img {
-    width: 400px;
-    aspect-ratio: 4 / 3;
-    object-fit: contain;
-    border-radius: 16px;
-    background-color: rgba(0,0,0,0.2);
-}
-
-/* Grid para las tarjetas de categoría */
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* Tarjeta de categoría individual */
-.category-card {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 30px 20px;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.category-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border-color: #4fc3f7;
-}
-
-.category-card i {
-    font-size: 3rem;
-    color: #4fc3f7;
-    margin-bottom: 15px;
-}
-
-.category-card h5 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-/* Título para subcategorías (ej. Agua Dulce, Agua Salada) */
-.subcategory-title {
-    font-size: 1.8rem;
-    color: #4fc3f7;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    text-align: center;
-    border-bottom: 2px solid rgba(79, 195, 247, 0.3);
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-/* Iconos en los títulos de sección principales */
-#peces h4 i, #acuarios h4 i, #alimento h4 i, #equipos h4 i {
-    margin-right: 15px;
-}
-
-/* --- Footer Mejorado --- */
-.site-footer {
-  background: #040f1a;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 50px 5%;
-  color: #aaa;
-}
-
-.footer-container {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-}
-
-.footer-column h5 {
-  color: #fff;
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
-.footer-column p {
-  margin-bottom: 10px;
-  line-height: 1.7;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin-bottom: 12px;
-}
-
-.footer-links a {
-  color: #aaa;
-  text-decoration: none;
-  transition: color 0.3s ease, padding-left 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #4fc3f7;
-  padding-left: 5px;
-}
-
-#nuestra-historia .section-container {
-    max-width: 900px;
-}
-
-#nuestra-historia h4 {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 15px;
-    margin-bottom: 40px;
-}
-
-#nuestra-historia h4::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: #4fc3f7;
-    border-radius: 2px;
-}
-
-.historia-texto {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.historia-texto p {
-    color: #e0e0f0;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
-.historia-texto p:last-child {
-    margin-bottom: 0;
-}
+/* --- Estilos de Secciones y Contenido (sin cambios) --- */
+.hero-content{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:50px 30px}.hero-content h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:700;margin-bottom:5px;background:linear-gradient(120deg,#fff,#c3d4ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 30px rgba(200,200,255,.3)}.hero-content>p{font-size:clamp(1rem,2.5vw,1.2rem);margin-bottom:30px;color:#e0e0f0;max-width:700px}.page-section{padding:50px 5%}.section-container{max-width:1300px;margin:0 auto;text-align:center}.section-container h4{font-size:clamp(2rem,4vw,2.8rem);font-weight:700;margin-bottom:20px}.section-container>p{max-width:800px;margin:0 auto 60px;color:#e0e0f0;font-size:1.1rem}.cta-button{display:inline-block;text-decoration:none;font-weight:600;border-radius:50px;transition:transform .3s,box-shadow .3s;cursor:pointer;font-size:1rem;padding:12px 28px;background:linear-gradient(135deg,#00c6ff,#0072ff);border:none;color:#fff;box-shadow:0 5px 20px rgba(0,114,255,.4);margin-top:15px}.cta-button:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,180,255,.6)}.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}.product-card{background:rgba(15,23,42,.6);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;text-align:center;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}.product-card:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(0,0,0,.4)}.product-card img{width:100%;height:200px;object-fit:contain;border-radius:12px;margin-bottom:15px;background-color:rgba(0,0,0,.2)}.product-card h5{font-size:1.4rem;color:#fff;margin-bottom:10px}.product-card p{color:#e0e0f0;font-size:.95rem;margin-bottom:15px;flex-grow:1}.product-card .price{font-size:1.6rem;font-weight:700;color:#4fc3f7;margin-bottom:15px}.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;text-align:left}.guide-item{background:rgba(255,255,255,.05);padding:30px;border-radius:16px;border:1px solid rgba(255,255,255,.1)}.guide-item i{font-size:2.5rem;color:#4fc3f7;margin-bottom:15px}.guide-item h5{font-size:1.5rem;margin-bottom:10px}.location-details{font-size:1.2rem;margin-bottom:20px}.map-container{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}.contact-form{max-width:800px;margin:0 auto;text-align:left}.contact-form label{display:block;margin-bottom:8px;font-weight:500}.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:14px;margin-bottom:20px;background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.1);border-radius:12px;color:#fff;font-size:1rem;font-family:'Poppins',sans-serif}.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;border-color:#4fc3f7}.contact-form textarea{resize:none}.contact-form select{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234fc3f7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right 1rem center;background-size:1.2em;padding-right:2.5rem}.contact-form select:invalid{color:#a0a0a0}.contact-form option{background-color:#06152B;color:#fff}.contact-details{text-align:center}.contact-details p{font-size:1.2rem;margin-bottom:15px}.contact-details a{color:#fff;text-decoration:none;transition:color .3s ease}.contact-details a:hover{color:#4fc3f7}.contact-details i{color:#4fc3f7;margin-right:15px;width:20px;text-align:center}.quienes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;margin-top:60px}.quienes-item{background:rgba(15,23,42,.6);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:30px 20px;text-align:center;transition:transform .3s,box-shadow .3s}.quienes-item:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(0,0,0,.4)}.quienes-item img{width:180px;height:180px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:4px solid #4fc3f7;box-shadow:0 0 20px rgba(79,195,247,.4);transition:transform .3s;background-color:rgba(6,21,43,.5)}.quienes-item:hover img{transform:scale(1.05)}.quienes-item h5{font-size:1.6rem;margin-bottom:8px;color:#fff}.quienes-item p{font-size:1rem;color:#4fc3f7;font-weight:500}.image-carousel-container{overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent);mask-image:linear-gradient(to right,transparent,black 10%,black 90%,transparent)}.image-carousel{display:flex;gap:20px;width:calc((400px + 20px) * 10);animation:scroll 40s linear infinite}@keyframes scroll{to{transform:translateX(calc((400px + 20px) * -5))}}.image-carousel:hover{animation-play-state:paused}.image-carousel img{width:400px;aspect-ratio:4/3;object-fit:contain;border-radius:16px;background-color:rgba(0,0,0,.2)}.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;max-width:1000px;margin:0 auto}.category-card{background:rgba(15,23,42,.7);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:30px 20px;text-align:center;text-decoration:none;color:#fff;transition:transform .3s,box-shadow .3s,border-color .3s}.category-card:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(0,0,0,.4);border-color:#4fc3f7}.category-card i{font-size:3rem;color:#4fc3f7;margin-bottom:15px}.category-card h5{font-size:1.5rem;margin:0}.subcategory-title{font-size:1.8rem;color:#4fc3f7;margin-top:60px;margin-bottom:30px;text-align:center;border-bottom:2px solid rgba(79,195,247,.3);padding-bottom:10px;display:inline-block}#acuarios h4 i,#alimento h4 i,#equipos h4 i,#peces h4 i{margin-right:15px}.site-footer{background:#040f1a;border-top:1px solid rgba(255,255,255,.1);padding:50px 5%;color:#aaa}.footer-container{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px}.footer-column h5{color:#fff;font-size:1.3rem;margin-bottom:20px}.footer-column p{margin-bottom:10px;line-height:1.7}.footer-links{list-style:none;padding:0;margin:0}.footer-links li{margin-bottom:12px}.footer-links a{color:#aaa;text-decoration:none;transition:color .3s ease,padding-left .3s ease}.footer-links a:hover{color:#4fc3f7;padding-left:5px}#nuestra-historia .section-container{max-width:900px}#nuestra-historia h4{position:relative;display:inline-block;padding-bottom:15px;margin-bottom:40px}#nuestra-historia h4::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:3px;background:#4fc3f7;border-radius:2px}.historia-texto{text-align:left;max-width:800px;margin:0 auto}.historia-texto p{color:#e0e0f0;font-size:1.1rem;line-height:1.8;margin-bottom:25px}.historia-texto p:last-child{margin-bottom:0}
 
 
 /* ================================================================== */
 /* =========   ESTILOS RESPONSIVOS PARA TODOS LOS DISPOSITIVOS  ========= */
 /* ================================================================== */
 
-/* --- Para Tablets (hasta 992px) --- */
 @media (max-width: 992px) {
-    .menu {
-        gap: 20px; /* Reduce el espacio entre elementos del menú */
+    /* --- Estilos para Tablets --- */
+    
+    /* Oculta el menú de escritorio y muestra el botón hamburguesa */
+    .menu, .nav-button {
+        display: none;
+    }
+    .nav-toggle, .nav-toggle-label {
+        display: block;
     }
 
-    .footer-container {
-        /* Pasa el grid del footer a 2 columnas para mejor visualización */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
-
-
-/* --- Para Celulares y Tablets en Vertical (hasta 768px) --- */
-@media (max-width: 768px) {
-
-    /* --- 1. Ajustes Generales --- */
-    body {
-        font-size: 16px; /* Aumenta ligeramente la fuente base para legibilidad */
+    /* Estilo del botón hamburguesa */
+    .nav-toggle-label {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 25px;
+        right: 5%;
+        cursor: pointer;
+        z-index: 1001; /* Asegura que esté por encima de otros elementos */
     }
 
-    .section-container {
-        padding: 40px 20px; /* Ajusta el padding lateral */
-    }
-
-    /* --- 2. Menú de Navegación --- */
-    .nav-inner {
-        flex-direction: column; /* Apila el contenido del nav */
-        padding: 15px;
-    }
-
-    .logo {
-        margin-bottom: 15px;
-    }
-
-    .menu {
-        flex-direction: column; /* Apila los links del menú */
-        align-items: center;
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        background: white;
+        height: 2px;
         width: 100%;
-        gap: 0; /* Quita el gap horizontal */
-        margin-bottom: 15px;
+        border-radius: 2px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
     }
 
+    .nav-toggle-label span::before { top: -8px; }
+    .nav-toggle-label span::after { top: 8px; }
+
+    /* Contenedor del menú desplegable */
+    .nav-inner {
+        position: relative;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed; /* O fixed */
+        top: 70px; /* Altura del header */
+        left: 0;
+        width: 100%;
+        background: rgba(6, 21, 43, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 20px 0;
+        transform: translateY(-150%); /* Inicia oculto arriba */
+        transition: transform 0.4s ease-out;
+        z-index: 999;
+        gap: 0;
+    }
+    
     .menu li {
         width: 100%;
         text-align: center;
     }
 
     .menu a {
-        display: block; /* Hace que el link ocupe todo el ancho del li */
-        padding: 10px 0; /* Añade padding vertical para facilitar el toque */
-    }
-
-    .menu a::after {
-        /* Oculta la línea de abajo en móvil o ajústala si prefieres */
-        display: none;
-    }
-    
-    .menu a.active {
-        /* Estilo más notorio para el link activo en móvil */
-        color: #fff;
-        background: rgba(79, 195, 247, 0.2);
-        border-radius: 8px;
+        display: block;
+        padding: 15px 0;
+        font-size: 1.2rem;
     }
 
     .nav-button {
-        width: 100%;
+        display: block; /* Muestra el botón dentro del menú móvil */
+        width: calc(100% - 40px);
+        margin: 20px auto 0;
         text-align: center;
-        padding: 12px 0;
+        padding: 12px;
     }
 
-    /* --- 3. Contenido Hero y Títulos --- */
-    .hero-content {
-        padding: 30px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.2rem; /* Reduce el título principal */
-    }
-
-    .hero-content > p {
-        font-size: 1rem;
-        max-width: 100%; /* Permite que el párrafo ocupe más espacio */
+    /* Funcionalidad del checkbox */
+    .nav-toggle {
+        display: none; /* Oculta el checkbox real */
     }
     
-    .section-container > p {
-        margin-bottom: 40px; /* Reduce el margen inferior del párrafo de sección */
+    .nav-toggle:checked ~ .menu,
+    .nav-toggle:checked ~ .nav-button {
+        display: block; /* Muestra el botón cuando el menú está abierto */
+        transform: translateY(0);
     }
 
-    /* --- 4. Grids de Contenido (LA PARTE CLAVE) --- */
-    .product-grid,
-    .guide-grid,
-    .category-grid,
-    .quienes-grid,
+    /* Animación del ícono hamburguesa a "X" */
+    .nav-toggle:checked ~ .nav-toggle-label span {
+        background: transparent; /* La línea del medio desaparece */
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    /* --- Otros ajustes para tablets --- */
     .footer-container {
-        grid-template-columns: 1fr; /* TODAS las grids a una sola columna */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    /* --- Estilos para Celulares (hereda y ajusta los de tablet) --- */
+    
+    /* Ajustes Generales */
+    body { font-size: 16px; }
+    .section-container { padding: 40px 20px; }
+    .page-section { padding: 40px 0; }
+
+    /* Contenido Hero y Títulos */
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content > p { font-size: 1rem; }
+    .section-container > p { margin-bottom: 40px; }
+
+    /* Grids a una sola columna */
+    .product-grid, .guide-grid, .category-grid, .quienes-grid, .footer-container {
+        grid-template-columns: 1fr;
         gap: 25px;
     }
 
-    /* --- 5. Carrusel --- */
+    /* Carrusel */
     @keyframes scroll {
-        to {
-            /* Ajusta la animación para el nuevo tamaño de imagen */
-            transform: translateX(calc((300px + 20px) * -5));
-        }
+        to { transform: translateX(calc((300px + 20px) * -5)); }
     }
+    .image-carousel { width: calc((300px + 20px) * 10); }
+    .image-carousel img { width: 300px; }
 
-    .image-carousel {
-        /* Ajusta el ancho total del carrusel */
-        width: calc((300px + 20px) * 10);
-    }
-    
-    .image-carousel img {
-        width: 300px; /* Reduce el tamaño de las imágenes del carrusel */
-    }
+    /* Footer */
+    .site-footer { padding: 40px 20px; }
+    .footer-container { text-align: center; }
+    .footer-column { margin-bottom: 30px; }
+    .footer-column:last-child { margin-bottom: 0; }
 
-    /* --- 6. Footer --- */
-    .site-footer {
-        padding: 40px 20px;
-    }
-
-    .footer-container {
-        text-align: center;
-    }
-    
-    .footer-column {
-        margin-bottom: 30px;
-    }
-
-    .footer-column:last-child {
-        margin-bottom: 0;
-    }
-
-    /* --- 7. Quiénes Somos y Contacto --- */
-    .quienes-item img {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .contact-form {
-        padding: 0; /* El padding ya está en .section-container */
-    }
+    /* Quiénes Somos y Contacto */
+    .quienes-item img { width: 150px; height: 150px; }
+    .contact-form { padding: 0; }
 }
