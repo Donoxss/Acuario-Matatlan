@@ -3,49 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicación y horarios - Acuario Matatlán</title>
-    <link rel="icon" type="image/png" href="imagenes logo/logoH.png">
+    <title>Ubicación - Acuario Matatlán</title>
+    <link rel="icon" type="image/png" href="logoH.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
      <div class="background-container">
-        <img src="fondos/fondo4.jpg" alt="Fondo marino del acuario" class="background-media">
+        <img src="fondo4.jpg" alt="Fondo marino" class="background-media">
         <div class="background-overlay"></div>
     </div>
 
     <header>
         <nav class="nav-inner">
-            <a href="index.html" class="logo"><img src="imagenes logo/logoB.png" alt="Logo Acuario Matatlán" /></a>
+            <a href="index.html" class="logo"><img src="logoB.png" alt="Logo Acuario Matatlán" /></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="ubicacion.html" class="active">Ubicación</a></li>
+                <li><a href="peces.html">Peces</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="cuidados.html">Guía de cuidados</a></li>
+                <li><a href="quienes.html" class="nav-button">¿Quiénes somos?</a></li>
             </ul>
-            <a href="quienes.html" class="nav-button">¿Quiénes somos?</a>
         </nav>
     </header>
 
     <main>
         <section class="hero-content">
-            <h1>Visita nuestra tienda física</h1>
-            <p>Ven a conocernos, ve a los peces en persona y recibe asesoría personalizada de nuestros expertos.</p>
+            <h1>Visita Nuestra Tienda</h1>
+            <p>Ven a conocernos y recibe asesoría personalizada de nuestros expertos.</p>
         </section>
         
-        <section id="ubicacion" class="page-section alternate-bg">
+        <section id="ubicacion" class="page-section">
             <div class="section-container">
-                <h4>Dirección y horarios</h4>
-                <div class="location-details">
-                    <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i>Camino a Matatlán #2400, Fraccionamiento Urbi Paseos de Santiago II, Tonalá, Jal.</p>
-                </div>
-                 <div class="location-details">
-                    <p><i class="fas fa-clock" style="margin-right: 10px;"></i><strong>Lunes a sábado:</strong> 10:00 AM - 7:00 PM<br><strong>Domingos:</strong> 11:00 AM - 4:00 PM</p>
-                </div>
-
-                <div class="map-container" style="max-width: 900px; margin: 40px auto 0 auto;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119462.83075784036!2d-103.27565117608614!3d20.660892837573947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b5e96e4bbd65%3A0x3116a98101842b0f!2sCETI%20Plantel%20Rio%20Santiago!5e0!3m2!1ses!2smx!4v1761619467394!5m2!1ses!2smx" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                <h4>Dirección y Horarios</h4>
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;"><i class="fas fa-map-marker-alt"></i> Camino a Matatlán #2400, Tonalá, Jal.</p>
+                <p style="font-size: 1.1rem;"><i class="fas fa-clock"></i> Lunes a Sábado: 10:00 AM - 7:00 PM</p>
+                <div style="width: 100%; max-width: 800px; height: 400px; background: #333; margin: 40px auto 0; border-radius: 16px; display:flex; align-items:center; justify-content:center;">Mapa no disponible</div>
             </div>
         </section>
     </main>
@@ -55,16 +51,22 @@
             <div class="footer-column">
                 <h5>Acuario Matatlán</h5>
                 <p>Tu tienda de acuariofilia. Pasión y calidad para tu mundo acuático.</p>
-                <p>Donovan Pérez | © 2025 Todos los derechos reservados.</p>
+                <p>Donovan Pérez | © 2025</p>
             </div>
             <div class="footer-column">
                 <h5>Contacto y ayuda</h5>
                 <ul class="footer-links">
-                    <li><a href="contacto.html">Formulario de contacto</a></li>
-                    <li><a href="ubicacion.html">Ubicación y horarios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        navToggle.addEventListener('change', function() {
+            document.body.classList.toggle('menu-open', this.checked);
+        });
+    </script>
 </body>
 </html>
