@@ -532,9 +532,9 @@ header {
 }
 
 #nuestra-historia h4 {
-    position: relative;         
-    display: inline-block;      
-    padding-bottom: 15px;     
+    position: relative;        
+    display: inline-block;    
+    padding-bottom: 15px;      
     margin-bottom: 40px;      
 }
 
@@ -544,25 +544,128 @@ header {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;              
-    height: 3px;                
-    background: #4fc3f7;      
+    width: 80px;            
+    height: 3px;              
+    background: #4fc3f7;     
     border-radius: 2px;
 }
 
 .historia-texto {
-    text-align: left;       
+    text-align: left;        
     max-width: 800px;
-    margin: 0 auto;           
+    margin: 0 auto;         
 }
 
 .historia-texto p {
     color: #e0e0f0;
     font-size: 1.1rem;
-    line-height: 1.8;         
+    line-height: 1.8;        
     margin-bottom: 25px;     
 }
 
 .historia-texto p:last-child {
     margin-bottom: 0;
+}
+
+
+/* ============================================= */
+/* --- ESTILOS RESPONSIVOS PARA MÓVILES --- */
+/* (Se activa en pantallas de 768px o menos) */
+/* ============================================= */
+@media (max-width: 768px) {
+
+    /* --- 1. Ajustes Generales del Cuerpo --- */
+    body {
+        /* Reduce el tamaño de fuente base para mejorar la legibilidad en pantallas pequeñas */
+        font-size: 15px;
+    }
+
+    .section-container {
+        /* Reduce el padding lateral en las secciones para dar más espacio al contenido */
+        padding: 40px 15px;
+    }
+
+    /* --- 2. Menú de Navegación --- */
+    header .nav-inner {
+        /* Cambia la dirección del flexbox a columna para apilar los elementos */
+        flex-direction: column;
+        padding: 15px; /* Menos padding en el header */
+    }
+
+    header .logo {
+        /* Centra el logo */
+        margin-bottom: 15px;
+    }
+
+    header .menu {
+        /* El menú ahora se apila verticalmente */
+        flex-direction: column;
+        align-items: center; /* Centra los elementos del menú */
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    header .menu li {
+        margin: 8px 0; /* Añade espacio vertical entre los enlaces del menú */
+    }
+
+    header .nav-button {
+        /* El botón ahora ocupa todo el ancho */
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    /* --- 3. Contenido Principal y Títulos --- */
+    .hero-content {
+        padding: 0 15px; /* Menos padding lateral */
+    }
+
+    .hero-content h1 {
+        /* Reduce el tamaño del título principal para que no ocupe tanto espacio */
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        /* Limita el ancho del párrafo para que sea más fácil de leer */
+        max-width: 90%;
+    }
+
+    h4 {
+        font-size: 1.8rem; /* Reduce el tamaño de los subtítulos de sección */
+    }
+
+
+    /* --- 4. Grids de Productos, Guías y Categorías (El cambio más importante) --- */
+    
+    /* Esta regla se aplica a TODAS tus cuadrículas */
+    .product-grid,
+    .guide-grid,
+    .category-grid,
+    .quienes-grid {
+        /* Cambia la cuadrícula a una sola columna */
+        grid-template-columns: 1fr;
+        gap: 20px; /* Un poco menos de espacio entre elementos */
+    }
+
+    /* --- 5. Footer (Pie de Página) --- */
+    .site-footer .footer-container {
+        /* Apila las columnas del footer verticalmente */
+        flex-direction: column;
+        text-align: center; /* Centra el texto */
+    }
+    
+    .site-footer .footer-column {
+        margin-bottom: 20px; /* Añade espacio entre las columnas apiladas */
+    }
+    
+    .site-footer .footer-links li {
+        margin: 5px 0;
+    }
+
+    /* --- 6. Formulario de Contacto --- */
+    .contact-form {
+        padding: 20px; /* Menos padding en el formulario */
+    }
+
 }
